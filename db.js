@@ -5,14 +5,6 @@ const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 );
 
-// Test the connection
-supabase
-  .from('your_table')
-  .select('*')
-  .limit(1)
-  .then(({ data, error }) => {
-    if (error) console.error('Connection error:', error);
-    else console.log('Connected:', data);
-  });
+
 
 module.exports = supabase;
